@@ -1,0 +1,30 @@
+
+
+### Activities index function
+GET http://localhost:3000/activities.json
+
+### Activities show function
+GET http://localhost:3000/activities/1.json
+
+### Activities Create
+POST http://localhost:3000/activities.json
+Content-Type: application/json
+
+{
+  "user_id": "5",
+  "ability_level": "3", 
+  "activity_type": "catan"
+}
+
+### Activities Update
+PATCH http://localhost:3000/activities/1.json
+Content-Type: application/json
+
+{
+  "user_id": "3",
+  "ability_level": "3", 
+  "activity_type": "update function check"
+}
+
+### Activities delete
+DELETE http://localhost:3000/activities/3.json
