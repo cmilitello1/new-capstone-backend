@@ -11,9 +11,9 @@ POST http://localhost:3000/activities.json
 Content-Type: application/json
 
 {
-  "user_id": "5",
-  "ability_level": "3", 
-  "activity_type": "catan"
+  "user_id": "6",
+  "ability_level": "4", 
+  "activity_type": "soccer"
 }
 
 ### Activities Update
@@ -28,3 +28,81 @@ Content-Type: application/json
 
 ### Activities delete
 DELETE http://localhost:3000/activities/3.json
+
+
+
+### Users index function
+GET http://localhost:3000/users.json
+
+### Users show function
+GET http://localhost:3000/users/1.json
+
+### Users create function
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "create test",
+  "email": "test7@test.com",
+  "location": "long beach",
+  "distance_willing_to_travel": 5,
+  "addtional_notes": "hi!",
+  "password_digest": "password"
+}
+
+### Availabilities index function
+GET http://localhost:3000/availabilities.json
+
+### Availabilities show function
+GET http://localhost:3000/availabilities/1.json
+
+
+### Availabilities create function
+POST http://localhost:3000/availabilities.json
+Content-Type: application/json
+
+{
+   "user_id": 2,
+   "date": "2022-10-01",
+   "time_range": "3pm - 5pm"
+}
+
+### Availabilities update function
+PATCH http://localhost:3000/availabilities/5.json
+Content-Type: application/json
+
+{
+   "user_id": 1,
+   "date": "2022-10-01",
+   "time_range": "checking update method"
+}
+
+### Availabilities delete
+DELETE http://localhost:3000/availabilities/3.json
+
+
+### Seekings index function
+GET http://localhost:3000/seekings.json
+
+### Seeking create function
+POST http://localhost:3000/seekings.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "max_ppl": 11,
+  "date_time_wanted": "2001,2,3,4,5,6"
+}
+
+### Seeking update function
+PATCH http://localhost:3000/seekings/2.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "max_ppl": 11,
+  "date_time_wanted": 2001,2,3,4,5,6
+}
+
+### Seeking delete
+DELETE http://localhost:3000/seekings/3.json

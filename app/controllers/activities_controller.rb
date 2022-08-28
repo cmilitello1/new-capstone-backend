@@ -22,9 +22,9 @@ class ActivitiesController < ApplicationController
       ability_level: params[:ability_level]
     )
     if activity.save
-      render json: { message: "Activity created successfully" }, status: :created
+      render json: { message: "Activity created successfully"}, status: :created
     else
-      render json: { errors: activity.errors.full_messages }, status: :bad_request
+      render json: {errors: activity.errors.full_messages }, status: :bad_request
     end
   end 
 
