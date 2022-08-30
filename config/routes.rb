@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+# Sessions
+post "/sessions" => "sessions#create"
 
 # Users
 get "/users" => "users#index"

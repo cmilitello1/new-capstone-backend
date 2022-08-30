@@ -19,7 +19,8 @@ class UsersController < ApplicationController
       location: params[:location],
       distance_willing_to_travel: params[:distance_willing_to_travel],
       addtional_notes: params[:addtional_notes],
-      password_digest: params[:password_digest]
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
     )
     if user.save
       render json: {message: "user created!"}, status: :created

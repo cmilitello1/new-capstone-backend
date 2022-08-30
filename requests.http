@@ -1,5 +1,14 @@
 
 
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test7@test.com",
+  "password": "password"
+}
+
 ### Activities index function
 GET http://localhost:3000/activities.json
 
@@ -47,7 +56,8 @@ Content-Type: application/json
   "location": "long beach",
   "distance_willing_to_travel": 5,
   "addtional_notes": "hi!",
-  "password_digest": "password"
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### Availabilities index function
