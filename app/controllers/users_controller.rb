@@ -2,14 +2,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    render json: @users.as_json
-    # render template: "user/index"
+    #render json: @users.as_json
+    render template: "user/index"
   end 
 
   def show
     @users = User.find_by(id: params[:id])
     render json: @users.as_json
-    #render template: "user/show"
+    render template: "user/show"
   end
 
   def create
@@ -23,7 +23,8 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
     if user.save
-      render json: {message: "user created!"}, status: :created
+      #render json: {message: "user created!"}, status: :created
+      render template: "user/create"
     else
       render json: {errors: student.errors.full.messages }, status: :bad_request
     end

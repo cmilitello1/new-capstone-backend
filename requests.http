@@ -1,4 +1,6 @@
 
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NjE5MTE1MjF9.ggCJUC2t32G_YGzEhukUtbtQj-So7kT9yiCibSCqkQ4",
+
 
 ### Sessions create (login)
 POST http://localhost:3000/sessions.json
@@ -17,6 +19,7 @@ GET http://localhost:3000/activities/1.json
 
 ### Activities Create
 POST http://localhost:3000/activities.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {

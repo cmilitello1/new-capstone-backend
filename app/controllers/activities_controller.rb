@@ -2,14 +2,14 @@ class ActivitiesController < ApplicationController
 
   def index 
     @activities = Activity.all 
-    render json: @activities.as_json
-    # Once front end is set
-    # render template: "activities/index"
+    #render json: @activities.as_json
+    render template: "activities/index"
   end
 
   def show
     @activities = Activity.find_by(id: params[:id])
-    render json: @activities.as_json
+    #render json: @activities.as_json
+    render template: "activities/show"
   end
 
   def create
@@ -22,7 +22,8 @@ class ActivitiesController < ApplicationController
       ability_level: params[:ability_level]
     )
     if activity.save
-      render json: { message: "Activity created successfully"}, status: :created
+      #render json: { message: "Activity created successfully"}, status: :created
+      render template: "activities/create"
     else
       render json: {errors: activity.errors.full_messages }, status: :bad_request
     end
@@ -37,7 +38,8 @@ class ActivitiesController < ApplicationController
     activity.activity_type = params[:activity_type] || activity.activity_type
 
     if activity.save
-      render json: activity.as_json
+      #render json: activity.as_json
+      render template: "activities/update"
     else
       render json: {errors: activity.errors.full_messages}, status: 422
     end
