@@ -23,10 +23,10 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
     if user.save
-      #render json: {message: "user created!"}, status: :created
-      render template: "user/create"
+      render json: {message: "user created!"}, status: :created
+      # render template: "users/create"
     else
-      render json: {errors: student.errors.full.messages }, status: :bad_request
+      render json: {errors: user.errors.full_messages }, status: :bad_request
     end
   end 
 

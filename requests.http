@@ -1,5 +1,15 @@
 
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NjE5MTE1MjF9.ggCJUC2t32G_YGzEhukUtbtQj-So7kT9yiCibSCqkQ4",
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NjIwNzUwNjV9.7FB9CByzlVXWJgrwo5ttCCXOf-7PJlFCxUamat5FdP8,
+
+
+### Twilio test
+POST http://localhost:3000/sendtext.json
+Content-Type: application/json
+
+{
+  "phone": "+13148055210",
+  "textBody": "testing twilio"
+}
 
 
 ### Sessions create (login)

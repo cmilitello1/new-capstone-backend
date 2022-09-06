@@ -2,8 +2,8 @@ class ActivitiesController < ApplicationController
 
   def index 
     @activities = Activity.all 
-    #render json: @activities.as_json
-    render template: "activities/index"
+    render json: @activities.as_json
+    #render template: "activities/index"
   end
 
   def show
@@ -22,8 +22,8 @@ class ActivitiesController < ApplicationController
       ability_level: params[:ability_level]
     )
     if activity.save
-      #render json: { message: "Activity created successfully"}, status: :created
-      render template: "activities/create"
+      render json: { message: "Activity created successfully"}, status: :created
+      #render template: "activities/index"
     else
       render json: {errors: activity.errors.full_messages }, status: :bad_request
     end

@@ -1,0 +1,8 @@
+{
+  id: @activity.id,
+  created_at: @activity.created_at,
+  updated_at: @activity.updated_at
+  user_id: @activity.user_id,
+  ability_level: @activity.ability_level,
+  activity_type: @activity.activity_type
+}

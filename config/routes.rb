@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  #Twilio
+  post "/sendtext" => "twilio#index"
+
 # Sessions
 post "/sessions" => "sessions#create"
 
