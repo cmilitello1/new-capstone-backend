@@ -2,8 +2,8 @@ class ActivitiesController < ApplicationController
 
   def index 
     @activities = Activity.all 
-    render json: @activities.as_json
-    #render template: "activities/index"
+    render json: @activities.as_json(methods: [:user])
+    # render template: "activities/index"
   end
 
   def show

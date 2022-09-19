@@ -6,5 +6,6 @@
     activity_type: activity.activity_type,
     created_at: @activity.created_at,
     updated_at: @activity.updated_at,
+    user_name: @activity.user.name
   }
 end
