@@ -1,5 +1,5 @@
 
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NjIwNzUwNjV9.7FB9CByzlVXWJgrwo5ttCCXOf-7PJlFCxUamat5FdP8,
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjYzNzIwMTQ5fQ.HSe0CNTzrz5YpS3FvtamR4StaZO50HX1NCCOS6GXP9k,
 
 
 ### Twilio test
@@ -17,7 +17,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "test7@test.com",
+  "email": "sessions@test.com",
   "password": "password"
 }
 
@@ -40,6 +40,7 @@ Content-Type: application/json
 
 ### Activities Update
 PATCH http://localhost:3000/activities/1.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -64,9 +65,9 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "create test",
-  "email": "test7@test.com",
-  "location": "long beach",
+  "name": "sessions issue",
+  "email": "sessions123@test.com",
+  "location": "hb",
   "distance_willing_to_travel": 5,
   "addtional_notes": "hi!",
   "password": "password",

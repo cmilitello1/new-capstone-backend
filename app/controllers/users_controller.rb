@@ -23,6 +23,7 @@ class UsersController < ApplicationController
       password_confirmation: params[:password_confirmation]
     )
     if user.save
+      UserMailer.with(user: user).welcome_email.deliver_now 
       render json: {message: "user created!"}, status: :created
       # render template: "users/create"
     else
